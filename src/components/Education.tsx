@@ -6,7 +6,7 @@ import harvard from "../assets/school/harvard.jpeg";
 export default function Education() {
   return (
     <div className="education-section">
-      <div id='education' className="education-section-title">
+      <div id="education" className="education-section-title">
         <h1>Education</h1>
       </div>
 
