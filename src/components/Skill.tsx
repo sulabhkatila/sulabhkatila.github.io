@@ -11,7 +11,7 @@ export default function Skill({ title, items }: SkillProps) {
       <div className="skills-title-container">{title}</div>
       <div className="skills-container">
         {Object.entries(items).map(([name, img]) => {
-          const imagePath = `/src/assets/logo/${img}`;
+          const imagePath = `./skills_pic/${img}`;
 
           return (
             <div className="skill-container" key={name}>

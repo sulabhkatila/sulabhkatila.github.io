@@ -2,14 +2,6 @@ import React from "react";
 import Skill from "./Skill";
 import Carousel from "react-multi-carousel";
 
-// language
-/*
-interface SkillProps {
-  title: string;
-  items: Record<string, string>;
-}
-*/
-
 const language = {
   Python: "python.svg",
   C: "c.svg",

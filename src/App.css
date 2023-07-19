@@ -209,8 +209,8 @@
   }
 
   .home_img{
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 7px;
+    margin-right: 7px;
     margin-bottom: 1.7rem;
   }
 
@@ -219,8 +219,8 @@
   }
 
   .home_img img{
-    width: 310px;
-    height: 330px;
+    width: 290px;
+    height: 310px;
   }
 }
 
@@ -546,7 +546,6 @@ p {
   padding-bottom: 25px;
   text-align: center;
   width: 100%;
-  height: 80vh;
 }
 
 .footer_social-icons {
