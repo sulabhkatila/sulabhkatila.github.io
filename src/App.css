@@ -12,7 +12,7 @@
   --section-margin-top: 8rem;
   --section-margin-bottom: 8rem;
   --title-margin-top: 0.5rem;
-  --title-margin-bottom: 2.5rem;
+  --title-margin-bottom: 2rem;
   --section-margin-left: 7%;
   --section-margin-right: 7%;
 }
@@ -225,6 +225,18 @@
 }
 
 @media (max-width: 460px){
+  :root{
+    --m-title-margin-top: 5rem;
+    --m-title-margin-bottom: 0;
+    --m-section-margin-top: 1.75rem;
+    --m-section-margin-bottom: 0;
+  }
+
+  .new-home-container {
+    margin-top: var(--m-title-margin-bottom);
+    margin-bottom: var(--m-title-margin-top);
+  }
+
   .home_img{
     text-align: center;
     margin-bottom: 1.7rem;
@@ -247,6 +259,31 @@
     width: 255px;
     height: 270px;
   }
+
+  .skills-section {
+    padding-top: var(--m-section-margin-top) !important;
+    margin-bottom: var(--m-section-margin-bottom) !important;
+  }
+
+  .education-section {
+    padding-top:var(--m-section-margin-top) !important;
+    margin-bottom: var(--m-section-margin-bottom) !important;
+  }
+  
+  .education-section-title {
+    text-align: center;
+    margin-top: 40px !important;
+    margin-bottom: -20px !important;
+  }
+
+  .project-section {
+    padding-top: var(--m-section-margin-top) !important;
+    margin-bottom: var(--m-section-margin-bottom) !important;
+  }
+  
+  .project-section-title {
+    margin-top: var(--m-section-margin-top) !important;
+  }
 }
 
 .skills-section {
@@ -254,6 +291,10 @@
   margin-left: 5% !important;
   margin-right: 5% !important;
   margin-bottom: var(--section-margin-bottom);
+}
+
+.skills-section {
+  font-size: var(--title-font-size);
 }
 
 .skills-container {
@@ -312,14 +353,38 @@
   font-size: var(--title-font-size);
 }
 
+
+.skill-name-tooltip {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 9999; /* Ensure a high z-index to display the tooltip above other elements */
+}
+
+.skill-container {
+  position: relative; /* Ensure the .skill-container is a positioned element */
+}
+
+.skill-container:hover .skill-name-tooltip {
+  opacity: 1;
+}
+
 .education-section {
-  margin-left: var(--section-margin-left) !important;
-  margin-right: var(--section-margin-right) !important;
+  margin-left: var(--section-margin-left);
+  margin-right: var(--section-margin-right);
   padding-top: var(--section-margin-top);
   margin-bottom: var(--section-margin-bottom);
 }
 
-.education-section-title {
+.education-section-title h1 {
   text-align: center;
   margin-top: var(--title-margin-top);
   margin-bottom: var(--title-margin-bottom);
@@ -394,7 +459,7 @@
   margin-bottom: var(--section-margin-bottom);
 }
 
-.project-section-title {
+.project-section-title h1{
   text-align: center;
   margin-top: var(--title-margin-top);
   margin-bottom:calc(var(--title-margin-bottom) + 10px);

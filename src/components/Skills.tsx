@@ -50,7 +50,7 @@ export default function Skills() {
   return (
     <div id='skills' className="skills-section">
       <div className="skills-section-title">
-        <h1> Skills </h1>
+        <h1 className="skills-section-title"> Skills </h1>
       </div>
       <div className="">
         <Carousel
@@ -68,7 +68,6 @@ export default function Skills() {
             <Skill title="Libraries and Frameworks" items={library} />
           </div>
         </Carousel>
-        ;
       </div>
     </div>
   );

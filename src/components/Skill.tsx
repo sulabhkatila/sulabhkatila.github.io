@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { MouseEvent } from "react"
 
 interface SkillProps {
   title: string;
@@ -6,6 +7,16 @@ interface SkillProps {
 }
 
 export default function Skill({ title, items }: SkillProps) {
+  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
+
+  const handleMouseEnter = (name: string) => {
+    setHoveredSkill(name);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredSkill(null);
+  };
+
   return (
     <div>
       <div className="skills-title-container">{title}</div>
@@ -14,10 +25,19 @@ export default function Skill({ title, items }: SkillProps) {
           const imagePath = `./skills_pic/${img}`;
 
           return (
-            <div className="skill-container" key={name}>
+            <div
+              className="skill-container"
+              key={name}
+            >
               <div className="skill-image">
-                <img src={imagePath} alt={name} />
+                <img
+                onMouseEnter={() => handleMouseEnter(name)}
+                onMouseLeave={handleMouseLeave} 
+                src={imagePath} alt={name} />
               </div>
+              {hoveredSkill === name && (
+                <div className="skill-name-tooltip">{name}</div>
+              )}
             </div>
           );
         })}
