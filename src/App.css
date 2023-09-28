@@ -377,6 +377,29 @@
   opacity: 1;
 }
 
+.experience-description {
+  display: flex;
+  font-weight: bold;
+  font-size: 21px;
+  margin-bottom: 5px;
+}
+
+.experience-name {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.experience-details {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.experience-bullet {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
 .education-section {
   margin-left: var(--section-margin-left);
   margin-right: var(--section-margin-right);

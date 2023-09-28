@@ -7,6 +7,7 @@ import Education from "./components/Education";
 import ProjectCard from "./components/ProjectCard";
 import Contact from "./components/Footer";
 import Skills from "./components/Skills";
+import Experience from "./components/Experience"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <NavigationBar />
       <NewHome />
       <Skills />
+      <Experience />
       <Education />
       <ProjectCard />
       <Contact />
