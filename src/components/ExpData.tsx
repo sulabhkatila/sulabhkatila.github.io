@@ -7,14 +7,15 @@ const expData = [
         id: 1,
         name: "Computer Science and Mathematics Peer Tutor",
         company: "Saint Joseph's Univeristy",
-        time: "Feb 2023 - Present",
+        time: "Sep 2023 - Present",
         image: sjny,
         bulletPoints: [
             "•	Provide individualized tutoring in Calculus, Discrete Mathematics, Java Programming, and more, improving students' comprehension of challenging topics and facilitating their academic success", 
             "•	Develop customized study plans and teaching strategies, leveraging strong communication and leadership skills to create a collaborative learning environment.",
+            "•	Volunteered as a peer tutor (February - May 2023), achieving excellent results, leading to the commencement as an official employee in September 2023."
         ],
         skills: [
-            "Skills one", "Skills two"
+            "Communication", "Mathematics", "Computer Science"
         ],
     },
     {
@@ -27,6 +28,9 @@ const expData = [
             "•	Optimized session data storage for the cached_db backend in Django to prevent request crashes in case of cache failures.",
             "•	Enhanced Django's cross-platform compatibility, preserving colorized output in non-Windows environments.",
             "•	Spearheading the implementation of a rate-limiting feature in Activist to fortify system security and ensure fair usage.",
+        ],
+        skills: [
+            "Computer Science", "Collaboration"
         ]
     },
     {
@@ -37,6 +41,9 @@ const expData = [
         image: computerClub,
         bulletPoints: [
             "•	Co-lead a team of over 70 members in organizing and managing activities for the club, building a vibrant tech community.",
+        ],
+        skills: [
+            "Leadership", "Communication"
         ]
     },
 ]
