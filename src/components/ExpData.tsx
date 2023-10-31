@@ -25,9 +25,8 @@ const expData = [
         time: "August 2023 - Present",
         image: git,
         bulletPoints: [
-            "•	Optimized session data storage for the cached_db backend in Django to prevent request crashes in case of cache failures.",
-            "•	Enhanced Django's cross-platform compatibility, preserving colorized output in non-Windows environments.",
-            "•	Spearheading the implementation of a rate-limiting feature in Activist to fortify system security and ensure fair usage.",
+            "•	Optimized cached_db session data storage, and improved cross-platform compatibility for colorized output in Django.",
+            "•	Spearheading the implementation of a rate-limiting feature and API tests in Activist to fortify security and ensure fair usage.",
         ],
         skills: [
             "Computer Science", "Collaboration"
