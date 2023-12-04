@@ -18,7 +18,7 @@ const projectData = [
     source_code: "https://github.com/sulabhkatila/job-app_bot/blob/main/bot.py",
     link: "https://github.com/sulabhkatila/job-app_bot/blob/main/bot.py",
     description:
-      "Engineered a Python program to automate job application tracking, significantly streamlining the process and saving an average of 2 hours per week during peak application seasons.",
+      "Engineered a Python program to automate job application tracking, significantly streamlining the process and preventing email oversights",
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const projectData = [
       "https://github.com/sulabhkatila/Fake-News_Classification/blob/main/news.ipynb",
     link: "https://github.com/sulabhkatila/Fake-News_Classification/blob/main/news.ipynb",
     description:
-      "Conducted thorough data analysis, trained a neural network, and performed error analysis to gain insights into distinguishing true and fake news articles, achieving an 82% accuracy, and refined the model's performance using a CNN.",
+      "Conducted thorough data analysis, trained a neural network, and performed error analysis to gain insights into distinguishing true and fake news articles, achieving an 82% accuracy, and refined the model's performance using a CNN",
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const projectData = [
     source_code: "https://github.com/sulabhkatila/Fitness-Tracker",
     link: "https://web-production-2f98.up.railway.app/",
     description:
-      "A user-friendly and responsive front-end facilitating calorie tracking, workout monitoring, and nutrition management for users to achieve their fitness objectives and deployed the application with Railway.",
+      "A user-friendly and responsive front-end facilitating calorie tracking, workout monitoring, and nutrition management for users to achieve their fitness objectives and deployed the application with Railway",
   },
   {
     id: 4,
