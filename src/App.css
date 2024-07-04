@@ -78,7 +78,7 @@
 
 .home_social-icon {
   display: flex;
-  font-size: 20px;
+  font-size: 30px;
   transition: transform 0.4s;
   flex-direction: column;
   align-items: flex-start;
@@ -146,6 +146,7 @@
 
 .new-home-container {
   display: flex;
+  height: 80vh;
 }
 
 .home-title-container{
@@ -156,7 +157,8 @@
   margin-left: var(--section-margin-left);
   margin-right: var(--section-margin-right);
   margin-top: var(--section-margin-top);
-  margin-bottom: var(--section-margin-bottom);
+  
+  /*margin-bottom: var(--section-margin-bottom);*/
 }
 
 .home_img {
@@ -375,6 +377,15 @@
 
 .skill-container:hover .skill-name-tooltip {
   opacity: 1;
+}
+
+.experience-section {
+  margin-bottom: var(--m-section-margin-bottom) !important;
+}
+
+.experience-section-title {
+  text-align: center;
+  margin-bottom: -20px !important;
 }
 
 .experience-description {

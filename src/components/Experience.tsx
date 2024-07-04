@@ -1,10 +1,9 @@
-import React from "react";
 import expData from "./ExpData";
 
 export default function Experience() {
   return (
-    <div className="education-section">
-      <div id="education" className="education-section-title">
+    <div id="experience" className="experience-section">
+      <div className="experience-section-title">
         <h1>Experience</h1>
       </div>
 
@@ -20,7 +19,7 @@ export default function Experience() {
 
             <div className="experience-bullet">
               {exp.bulletPoints.map((bullet, index) => (
-                <div key={index} >{bullet}</div>
+                <div key={index}>{bullet}</div>
               ))}
             </div>
           </div>

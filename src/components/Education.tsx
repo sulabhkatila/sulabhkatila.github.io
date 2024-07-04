@@ -1,12 +1,10 @@
-import React from "react";
 import sjny from "../assets/school/sjny.jpeg";
 import cs50 from "../assets/school/cs50.jpeg";
-import harvard from "../assets/school/harvard.jpeg";
 
 export default function Education() {
   return (
-    <div className="education-section">
-      <div id="education" className="education-section-title">
+    <div id="education" className="education-section">
+      <div className="education-section-title">
         <h1>Education</h1>
       </div>
 
@@ -20,10 +18,10 @@ export default function Education() {
             BS (honors) Mathematics and Computer Science
           </div>
           <div>Sep 2022 - May 2026</div>
-          <div>GPA: 3.96</div>
+          <div>GPA: 3.98</div>
           <div>
             Awards: Honor’s Program, Esse-Non Videri Excellence Scholarship,
-            Dean’s List
+            Arts and Science Grant, Dean’s List(x4)
           </div>
         </div>
       </div>
