@@ -13,7 +13,10 @@ export default function Experience() {
             <img src={exp.image} alt="SJNY" />
           </div>
           <div className="experience-details">
-            <div className="experience-name">{exp.company}</div>
+            <div className="experience-name">
+              {exp.company}
+              {exp.location && <span className="experience-location"> · {exp.location}</span>}
+            </div>
             <div className="experience-description">{exp.name}</div>
             <div>{exp.time}</div>
 

@@ -1,5 +1,6 @@
 import "./App.css";
 
+import Awards from "./components/Awards";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
 import Contact from "./components/Footer";
@@ -16,6 +17,7 @@ function App() {
       <Experience />
       <ProjectCard />
       <Education />
+      <Awards />
       <Skills />
       <Contact />
     </>

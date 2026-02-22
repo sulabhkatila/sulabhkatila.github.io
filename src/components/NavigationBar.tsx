@@ -10,6 +10,7 @@ export default function NavigationBar() {
           <Nav.Link href="#experience">Experience</Nav.Link>
           <Nav.Link href="#project">Projects</Nav.Link>
           <Nav.Link href="#education">Education</Nav.Link>
+          <Nav.Link href="#awards">Awards</Nav.Link>
           <Nav.Link href="#skills">Skills</Nav.Link>
           <Nav.Link href="#contact">Contact</Nav.Link>
         </Nav>
