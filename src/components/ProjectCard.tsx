@@ -51,15 +51,16 @@ export default function ProjectCard() {
               </div>
             </div>
             <div className="project-btn-link">
-              <button>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Project
-                </a>
-              </button>
+              <motion.a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-view-btn"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                View Project →
+              </motion.a>
             </div>
           </motion.div>
         ))}

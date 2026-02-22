@@ -3,6 +3,7 @@ import "./App.css";
 import AnimatedSection from "./components/AnimatedSection";
 import Awards from "./components/Awards";
 import Education from "./components/Education";
+import ScrollProgress from "./components/ScrollProgress";
 import Experience from "./components/Experience";
 import Contact from "./components/Footer";
 import NavigationBar from "./components/NavigationBar";
@@ -13,6 +14,7 @@ import Skills from "./components/Skills";
 function App() {
   return (
     <>
+      <ScrollProgress />
       <NavigationBar />
       <NewHome />
       <AnimatedSection>

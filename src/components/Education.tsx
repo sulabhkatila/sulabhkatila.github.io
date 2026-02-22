@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import sjny from "../assets/school/sjny.jpeg";
 import cs50 from "../assets/school/cs50.jpeg";
 
@@ -36,30 +37,24 @@ export default function Education() {
             <p>Harvard University</p>
           </div>
           <div className="education-description">
-            <a
-              href="https://certificates.cs50.io/05a1797f-418a-41b8-a99e-797f653782fc.pdf?size=letter"
-              target="_blank"
-            >
-              <div className="cs50-course">CS50x</div>
-            </a>
-            <a
-              href="https://certificates.cs50.io/00676374-73ec-41fd-8490-24286aaac3b3.pdf?size=letter"
-              target="_blank"
-            >
-              <div className="cs50-course">CS50P</div>
-            </a>
-            <a
-              href="https://certificates.cs50.io/b204e7fd-2a36-4dfd-aafe-b74d9a252609.pdf?size=letter"
-              target="_blank"
-            >
-              <div className="cs50-course">CS50AI</div>
-            </a>
-            <a
-              href="https://certificates.cs50.io/998eada1-f22c-4a8a-800d-3b9db80883cf.pdf?size=letter"
-              target="_blank"
-            >
-              <div className="cs50-course">CS50W</div>
-            </a>
+            {[
+              { href: "https://certificates.cs50.io/05a1797f-418a-41b8-a99e-797f653782fc.pdf?size=letter", label: "CS50x" },
+              { href: "https://certificates.cs50.io/00676374-73ec-41fd-8490-24286aaac3b3.pdf?size=letter", label: "CS50P" },
+              { href: "https://certificates.cs50.io/b204e7fd-2a36-4dfd-aafe-b74d9a252609.pdf?size=letter", label: "CS50AI" },
+              { href: "https://certificates.cs50.io/998eada1-f22c-4a8a-800d-3b9db80883cf.pdf?size=letter", label: "CS50W" },
+            ].map(({ href, label }) => (
+              <motion.a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cs50-course"
+                whileHover={{ scale: 1.1, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {label}
+              </motion.a>
+            ))}
           </div>
         </div>
       </div>

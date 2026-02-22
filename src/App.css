@@ -17,6 +17,43 @@
   --section-margin-right: 7%;
 }
 
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(50, 85, 127, 0.12);
+  z-index: 10000;
+  overflow: hidden;
+}
+
+.scroll-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #32557f, #5a8bc4);
+  transition: width 0.15s ease-out;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #32557f;
+  color: white;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  z-index: 9998;
+  box-shadow: 0 4px 20px rgba(50, 85, 127, 0.4);
+}
+
+.back-to-top:hover {
+  background: #254061;
+}
+
 .custom-navbar {
   display: flex;
   position: sticky !important;
@@ -584,6 +621,7 @@
   align-items: center;
   gap: 1.25rem;
   padding: 1.5rem 1.75rem;
+  cursor: pointer;
   border-radius: 16px;
   background: #fff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -736,11 +774,21 @@
   background-color: rgba(27, 156, 252, 0.1);
 }
 
-.project-btn-link a {
+.project-btn-link a,
+.project-view-btn {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: rgba(27, 156, 252, 0.08);
+  border-radius: 8px;
   text-transform: uppercase;
   color: #1b9cfc;
   text-decoration: none;
   font-weight: bold;
+  transition: background 0.2s;
+}
+
+.project-view-btn:hover {
+  background: rgba(27, 156, 252, 0.15);
 }
 
 .h2,
