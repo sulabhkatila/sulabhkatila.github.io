@@ -1,5 +1,6 @@
 import "./App.css";
 
+import AnimatedSection from "./components/AnimatedSection";
 import Awards from "./components/Awards";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
@@ -14,12 +15,24 @@ function App() {
     <>
       <NavigationBar />
       <NewHome />
-      <Experience />
-      <ProjectCard />
-      <Education />
-      <Awards />
-      <Skills />
-      <Contact />
+      <AnimatedSection>
+        <Experience />
+      </AnimatedSection>
+      <AnimatedSection delay={0.1}>
+        <ProjectCard />
+      </AnimatedSection>
+      <AnimatedSection delay={0.1}>
+        <Education />
+      </AnimatedSection>
+      <AnimatedSection delay={0.1}>
+        <Awards />
+      </AnimatedSection>
+      <AnimatedSection delay={0.1}>
+        <Skills />
+      </AnimatedSection>
+      <AnimatedSection delay={0.1}>
+        <Contact />
+      </AnimatedSection>
     </>
   );
 }

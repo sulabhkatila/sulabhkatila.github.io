@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import projectData from "./ProjectData";
 
 export default function ProjectCard() {
@@ -18,12 +19,17 @@ export default function ProjectCard() {
         <h1>Projects</h1>
       </div>
       <div className="project-container">
-        {projectData.map((project) => (
-          <div
+        {projectData.map((project, i) => (
+          <motion.div
             className="project-card-container"
             key={project.id}
             onMouseEnter={() => handleMouseEnter(project.id)}
             onMouseLeave={handleMouseLeave}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.5, delay: i * 0.1 }}
+            whileHover={{ y: -8, transition: { duration: 0.2 } }}
           >
             <div className="project-image-container">
               <img
@@ -55,7 +61,7 @@ export default function ProjectCard() {
                 </a>
               </button>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import expData from "./ExpData";
 
 export default function Experience() {
@@ -7,8 +8,16 @@ export default function Experience() {
         <h1>Experience</h1>
       </div>
 
-      {expData.map((exp) => (
-        <div className="container education-card" key={exp.id}>
+      {expData.map((exp, i) => (
+        <motion.div
+          className="container education-card"
+          key={exp.id}
+          initial={{ opacity: 0, x: -24 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, delay: i * 0.08 }}
+          whileHover={{ y: -4, transition: { duration: 0.2 } }}
+        >
           <div>
             <img src={exp.image} alt="SJNY" />
           </div>
@@ -26,7 +35,7 @@ export default function Experience() {
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
