@@ -47,9 +47,9 @@ export default function Experience() {
     const maxDate = maxEnd;
     const range = maxDate - minDate || 1;
 
-    // Timeline scale: Jan 2024 to present
+    // Timeline scale: 2026 at top, 2024 near end of spine; spacing proportional between years
     const topMargin = 24;
-    const span = 55;
+    const span = 70;
     const dateToY = (months: number) => {
         const clamped = Math.max(minDate, Math.min(maxDate, months));
         return topMargin + ((maxDate - clamped) / range) * span;
@@ -80,7 +80,8 @@ export default function Experience() {
                     const topY =
                         yearCheckpoints.length === 1
                             ? topMargin + span / 2
-                            : topMargin + (i / (yearCheckpoints.length - 1)) * span;
+                            : topMargin +
+                              (i / (yearCheckpoints.length - 1)) * span;
                     return (
                         <div
                             key={year}
@@ -126,7 +127,18 @@ export default function Experience() {
                     })}
 
                 {result.map(({ exp, lane, isOngoing }, i) => {
-                    const topY = positions[i];
+                    const baseY = positions[i];
+                    const lift =
+                        exp.company === "TransPerfect"
+                            ? -12
+                            : exp.company === "HealthStream"
+                              ? -6
+                              : exp.company === "Boys Hope Girls Hope of New York"
+                                ? 2
+                                : exp.name === "Undergraduate Researcher"
+                                  ? -8
+                                  : 0;
+                    const topY = baseY + lift;
 
                     return (
                         <motion.div

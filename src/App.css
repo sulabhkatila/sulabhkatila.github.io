@@ -497,11 +497,16 @@
   margin-bottom: -20px !important;
 }
 
+.experience-section-title h1 {
+  margin-bottom: 0rem;
+}
+
 /* Timeline */
 .timeline-container {
   position: relative;
   min-height: 850px;
-  padding: 2rem 0 2.5rem;
+  padding: 0 0 2.5rem;
+  margin-top: -1rem;
 }
 
 .timeline-checkpoint {
@@ -526,9 +531,9 @@
 .timeline-spine {
   position: absolute;
   left: 50%;
-  top: 0;
-  height: calc(82% + 50px);
-  width: 2px;
+  top: 12%;
+  height: calc(82% + 80px);
+  width: 4px;
   background: linear-gradient(
     180deg,
     transparent,
@@ -551,17 +556,17 @@
 
 .timeline-node {
   position: absolute;
-  width: calc(50% - 2.75rem);
+  width: calc(50% - 3.25rem);
   max-width: 480px;
   transform: translateY(-50%);
 }
 
 .timeline-node--left {
-  right: calc(50% + 2.25rem);
+  right: calc(50% + 3.25rem);
 }
 
 .timeline-node--right {
-  left: calc(50% + 2.25rem);
+  left: calc(50% + 3.25rem);
 }
 
 .timeline-node--left .timeline-card {
@@ -575,17 +580,17 @@
 .timeline-branch {
   position: absolute;
   top: 50%;
-  width: 1.5rem;
+  width: 2.5rem;
   height: 2px;
   background: rgba(50, 85, 127, 0.35);
 }
 
 .timeline-node--left .timeline-branch {
-  right: -1.5rem;
+  right: -2.5rem;
 }
 
 .timeline-node--right .timeline-branch {
-  left: -1.5rem;
+  left: -2.5rem;
 }
 
 .timeline-node--ongoing .timeline-branch {
