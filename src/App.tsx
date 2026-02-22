@@ -16,25 +16,27 @@ function App() {
     <>
       <ScrollProgress />
       <NavigationBar />
-      <NewHome />
-      <AnimatedSection>
-        <Experience />
-      </AnimatedSection>
-      <AnimatedSection delay={0.1}>
-        <ProjectCard />
-      </AnimatedSection>
-      <AnimatedSection delay={0.1}>
-        <Education />
-      </AnimatedSection>
-      <AnimatedSection delay={0.1}>
-        <Awards />
-      </AnimatedSection>
-      <AnimatedSection delay={0.1}>
-        <Skills />
-      </AnimatedSection>
-      <AnimatedSection delay={0.1}>
-        <Contact />
-      </AnimatedSection>
+      <main id="main-content">
+        <NewHome />
+        <AnimatedSection>
+          <Experience />
+        </AnimatedSection>
+        <AnimatedSection delay={0.1}>
+          <ProjectCard />
+        </AnimatedSection>
+        <AnimatedSection delay={0.1}>
+          <Education />
+        </AnimatedSection>
+        <AnimatedSection delay={0.1}>
+          <Awards />
+        </AnimatedSection>
+        <AnimatedSection delay={0.1}>
+          <Skills />
+        </AnimatedSection>
+        <AnimatedSection delay={0.1}>
+          <Contact />
+        </AnimatedSection>
+      </main>
     </>
   );
 }
