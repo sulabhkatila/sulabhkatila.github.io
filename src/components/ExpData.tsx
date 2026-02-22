@@ -2,6 +2,7 @@ import transperfect from "../assets/experience/transperfect.jpeg";
 import healthstream from "../assets/experience/healthstream.jpeg";
 import sjny from "../assets/school/sjny.jpeg";
 
+// start/end: [year, month] for sorting; end null = ongoing
 const expData = [
   {
     id: 1,
@@ -9,6 +10,8 @@ const expData = [
     company: "TransPerfect",
     location: "New York, NY",
     time: "February 2025 – Present",
+    start: [2025, 2],
+    end: null, // ongoing
     image: transperfect,
     bulletPoints: [
       "• Developed and maintained automated test scripts using the .NET framework in C# to validate web application functionality",
@@ -25,6 +28,8 @@ const expData = [
     company: "St. Joseph's University",
     location: "New York, NY",
     time: "September 2023 – Present",
+    start: [2023, 9],
+    end: null, // ongoing
     image: sjny,
     bulletPoints: [
       "• Conduct tutoring sessions for students in Programming in Java, Data Structures and Algorithms, Scripting Languages, Calculus, and Statistics, achieving up to an 80% improvement in test scores",
@@ -38,6 +43,8 @@ const expData = [
     company: "St. Joseph's University",
     location: "New York, NY",
     time: "June 2024 – August 2024",
+    start: [2024, 6],
+    end: [2024, 8],
     image: sjny,
     bulletPoints: [
       "• Collected and processed over 70,000 rows of publicly available data on NYC real estate, leveraging Python and libraries such as Pandas and NumPy for cleaning and feature engineering to prepare data for analysis",
@@ -52,6 +59,8 @@ const expData = [
     company: "HealthStream",
     location: "Remote, USA",
     time: "September 2024 – December 2024",
+    start: [2024, 9],
+    end: [2024, 12],
     image: healthstream,
     bulletPoints: [
       "• Designed and built an automated testing framework from scratch using Python and Selenium, with comprehensive documentation",
