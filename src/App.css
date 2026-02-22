@@ -486,7 +486,8 @@
 }
 
 .experience-section {
-  margin-bottom: var(--m-section-margin-bottom) !important;
+  padding-top: var(--section-margin-top);
+  margin-bottom: 2.5rem;
   margin-left: var(--section-margin-left);
   margin-right: var(--section-margin-right);
 }
@@ -499,15 +500,34 @@
 /* Timeline */
 .timeline-container {
   position: relative;
-  min-height: 1200px;
-  padding: 2rem 0;
+  min-height: 850px;
+  padding: 2rem 0 2.5rem;
+}
+
+.timeline-checkpoint {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.timeline-checkpoint-year {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #32557f;
+  background: #fff;
+  border: 1px solid rgba(50, 85, 127, 0.3);
+  border-radius: 4px;
+  white-space: nowrap;
 }
 
 .timeline-spine {
   position: absolute;
   left: 50%;
   top: 0;
-  bottom: 0;
+  height: calc(82% + 50px);
   width: 2px;
   background: linear-gradient(
     180deg,
@@ -522,54 +542,50 @@
 
 .timeline-ongoing-ribbon {
   position: absolute;
-  width: 4px;
+  width: 6px;
   background: #32557f;
-  border-radius: 2px;
+  border-radius: 3px;
   pointer-events: none;
+  display: none; /* hidden - was causing dark line on left */
 }
 
 .timeline-node {
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  max-width: 520px;
+  width: calc(50% - 2.75rem);
+  max-width: 480px;
+  transform: translateY(-50%);
 }
 
 .timeline-node--left {
-  transform: translate(-100%, -50%);
-  left: 50%;
-  padding-right: 2rem;
+  right: calc(50% + 2.25rem);
 }
 
 .timeline-node--right {
-  transform: translate(0, -50%);
-  left: 50%;
-  padding-left: 2rem;
+  left: calc(50% + 2.25rem);
 }
 
 .timeline-node--left .timeline-card {
-  margin-right: auto;
+  margin-left: auto;
 }
 
 .timeline-node--right .timeline-card {
-  margin-left: auto;
+  margin-right: auto;
 }
 
 .timeline-branch {
   position: absolute;
   top: 50%;
-  width: 2rem;
+  width: 1.5rem;
   height: 2px;
   background: rgba(50, 85, 127, 0.35);
 }
 
 .timeline-node--left .timeline-branch {
-  right: 0;
+  right: -1.5rem;
 }
 
 .timeline-node--right .timeline-branch {
-  left: 0;
+  left: -1.5rem;
 }
 
 .timeline-node--ongoing .timeline-branch {
@@ -645,6 +661,7 @@
 .timeline-node .experience-bullet {
   font-size: 0.95rem;
   margin-top: 0.5rem;
+  display: none; /* hidden for now, kept for later use */
 }
 
 @media (max-width: 900px) {
@@ -652,21 +669,19 @@
     min-height: auto;
     display: flex;
     flex-direction: column;
+    padding: 1rem 0 2rem;
   }
 
   .timeline-node {
     position: relative !important;
     left: auto !important;
+    right: auto !important;
     top: auto !important;
+    width: 100% !important;
+    max-width: none !important;
     transform: none !important;
     margin-bottom: 1.5rem;
     padding: 0;
-  }
-
-  .timeline-node--left,
-  .timeline-node--right {
-    transform: none !important;
-    left: auto !important;
   }
 
   .timeline-node--left .timeline-card,
@@ -676,7 +691,8 @@
 
   .timeline-spine,
   .timeline-branch,
-  .timeline-ongoing-ribbon {
+  .timeline-ongoing-ribbon,
+  .timeline-checkpoint {
     display: none !important;
   }
 }
@@ -695,9 +711,11 @@
 }
 
 .experience-location {
+  display: block;
   font-weight: 400;
   font-size: 0.85em;
   color: #555;
+  margin-top: 0.2rem;
 }
 
 .experience-details {
@@ -889,7 +907,7 @@
 .project-section {
   margin-left: 7% !important;
   margin-right: 7% !important;
-  padding-top: var(--section-margin-top);
+  padding-top: 2.5rem;
   margin-bottom: var(--section-margin-bottom);
 }
 
