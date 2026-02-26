@@ -47,9 +47,9 @@ export default function Experience() {
     const maxDate = maxEnd;
     const range = maxDate - minDate || 1;
 
-    // Timeline scale: 2026 at top, 2024 near end of spine; spacing proportional between years
-    const topMargin = 24;
-    const span = 70;
+    // Timeline scale: 2026 at top, 2023 at bottom; keep topMargin + span <= 100 so 2023 is visible
+    const topMargin = 8;
+    const span = 92;
     const dateToY = (months: number) => {
         const clamped = Math.max(minDate, Math.min(maxDate, months));
         return topMargin + ((maxDate - clamped) / range) * span;
@@ -58,7 +58,7 @@ export default function Experience() {
     // Position experiences by end date
     const positions = result.map((r) => dateToY(getEndMonths(r.exp)));
 
-    // Year checkpoints: 2024–maxYear (exclude 2023)
+    // Year checkpoints: 2024 through maxYear (2023 excluded)
     const minYear = Math.max(2024, Math.floor(minDate / 12));
     const maxYear = Math.floor(maxDate / 12);
     const yearCheckpoints = Array.from(
@@ -75,13 +75,16 @@ export default function Experience() {
             <div className="timeline-container">
                 <div className="timeline-spine" aria-hidden="true" />
 
-                {/* Year checkpoints - evenly spaced (equal distance between each) */}
+                {/* Year checkpoints - clustered around center so 2026 and 2024 sit closer to 2025 */}
                 {yearCheckpoints.map((year, i) => {
+                    const cpInset = 14;
+                    const cpTop = topMargin + cpInset;
+                    const cpSpan = span - cpInset * 2;
                     const topY =
                         yearCheckpoints.length === 1
-                            ? topMargin + span / 2
-                            : topMargin +
-                              (i / (yearCheckpoints.length - 1)) * span;
+                            ? cpTop + cpSpan / 2
+                            : cpTop +
+                              (i / (yearCheckpoints.length - 1)) * cpSpan;
                     return (
                         <div
                             key={year}
@@ -130,14 +133,16 @@ export default function Experience() {
                     const baseY = positions[i];
                     const lift =
                         exp.company === "TransPerfect"
-                            ? -12
+                            ? -3 // lower (closer to 2024/2023)
                             : exp.company === "HealthStream"
-                              ? -6
-                              : exp.company === "Boys Hope Girls Hope of New York"
-                                ? 2
+                              ? -13 // higher on the spine
+                              : exp.company === "Boys Hope Girls Hope"
+                                ? -10
                                 : exp.name === "Undergraduate Researcher"
-                                  ? -8
-                                  : 0;
+                                  ? -18 // higher on the spine
+                                  : exp.name === "Tutor"
+                                    ? 0 // lower on the spine
+                                    : 0;
                     const topY = baseY + lift;
 
                     return (

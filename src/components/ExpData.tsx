@@ -1,6 +1,6 @@
+import bhgh from "../assets/experience/bhgh.png";
 import healthstream from "../assets/experience/healthstream.jpeg";
 import transperfect from "../assets/experience/transperfect.jpeg";
-import bhgh from "../assets/experience/bhgh.png";
 import sjny from "../assets/school/sjny.jpeg";
 
 // start/end: [year, month] for sorting; end null = ongoing
@@ -72,18 +72,32 @@ const expData = [
     },
     {
         id: 5,
+        name: "Vice President",
+        company: "Computer Club",
+        location: "New York, NY",
+        time: "May 2023 – May 2024",
+        start: [2023, 5],
+        end: [2024, 5],
+        image: sjny,
+        bulletPoints: [
+            "• Led club initiatives and supported the President in organizing events and activities for the computer science community",
+        ],
+        skills: ["Leadership", "Event Planning"],
+    },
+    {
+        id: 6,
         name: "Mathematics Tutor",
         company: "Boys Hope Girls Hope",
         location: "Brooklyn, NY",
         time: "February 2024 – May 2024",
-    start: [2024, 2],
-    end: [2024, 5],
-    image: bhgh,
-    bulletPoints: [
-      "• Mentored high-school students on Pre-Calculus, Algebra, Geometry, and Trigonometry",
-    ],
-    skills: ["Pre-Calculus", "Algebra", "Geometry", "Trigonometry"],
-  },
+        start: [2024, 2],
+        end: [2024, 5],
+        image: bhgh,
+        bulletPoints: [
+            "• Mentored high-school students on Pre-Calculus, Algebra, Geometry, and Trigonometry",
+        ],
+        skills: ["Pre-Calculus", "Algebra", "Geometry", "Trigonometry"],
+    },
 ];
 
 export default expData;

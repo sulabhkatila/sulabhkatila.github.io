@@ -531,8 +531,8 @@
 .timeline-spine {
   position: absolute;
   left: 50%;
-  top: 12%;
-  height: calc(82% + 80px);
+  top: 8%;
+  height: 90%;
   width: 4px;
   background: linear-gradient(
     180deg,
