@@ -10,9 +10,9 @@ const expData = [
         name: "Automation Engineering Intern",
         company: "TransPerfect",
         location: "New York, NY",
-        time: "February 2025 – Present",
+        time: "February 2025 – May 2026",
         start: [2025, 2],
-        end: null, // ongoing
+        end: [2026, 5],
         image: transperfect,
         bulletPoints: [
             "• Developed and maintained automated test scripts using the .NET framework in C# to validate web application functionality",
@@ -28,9 +28,9 @@ const expData = [
         name: "Tutor",
         company: "St. Joseph's University",
         location: "New York, NY",
-        time: "September 2023 – Present",
+        time: "September 2023 – May 2026",
         start: [2023, 9],
-        end: null, // ongoing
+        end: [2026, 5],
         image: sjny,
         bulletPoints: [
             "• Conduct tutoring sessions for students in Programming in Java, Data Structures and Algorithms, Scripting Languages, Calculus, and Statistics, achieving up to an 80% improvement in test scores",
