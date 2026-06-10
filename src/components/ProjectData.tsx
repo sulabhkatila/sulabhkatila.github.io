@@ -1,9 +1,13 @@
+import batmappergif from "../assets/project_gif/batmapper.gif";
+import wheremyphoneatgif from "../assets/project_gif/wheremyphoneat.gif";
 import coderoyalegif from "../assets/project_gif/CodeRoyale.gif";
 import emailreadreceiptsgeneratorgif from "../assets/project_gif/EmailReadReceiptsGeneratorGif.gif";
 import productwebscrappergif from "../assets/project_gif/ProductWebScrapperGif.gif";
 import fakeNewsGif from "../assets/project_gif/fake_news.gif";
 import fitnessTrackerGif from "../assets/project_gif/fitness_tracker.gif";
 import portfolioGif from "../assets/project_gif/portfolioGif.gif";
+import batmapperpic from "../assets/project_pic/batmapper.png";
+import wheremyphoneatpic from "../assets/project_pic/wheremyphoneat.png";
 import coderoyalepic from "../assets/project_pic/CodeRoyale.jpeg";
 import emailreadreceiptsgeneratorpic from "../assets/project_pic/EmailReadReceiptGeneratorPic.jpeg";
 import productwebscrapperpic from "../assets/project_pic/ProductWebScrapperPic.jpeg";
@@ -13,6 +17,28 @@ import jobAppPic from "../assets/project_pic/jobAppPic.png";
 import portfolioPic from "../assets/project_pic/portfolioPic.jpeg";
 
 const projectData = [
+  {
+    id: 8,
+    name: "BatMapper",
+    gif: batmappergif,
+    image: batmapperpic,
+    categroy: "iOS Development",
+    tech: "Swift | Accelerometer | Gyroscope | Microphone | Speaker",
+    source_code: "https://github.com/sulabhkatila/batmapper",
+    link: "https://github.com/sulabhkatila/batmapper",
+    description: "An iOS app that maps the internal geometry of houses and rooms using only sound, accelerometer, and gyroscope. It infers the geometry of surroundings (walls vs. open spaces) without relying on visual information like cameras or LiDAR.",
+  },
+  {
+    id: 9,
+    name: "Smartphone Placement Recognition",
+    gif: wheremyphoneatgif,
+    image: wheremyphoneatpic,
+    categroy: "Machine Learning / iOS",
+    tech: "Python | FastAPI | Swift | AdaBoost | WebSockets",
+    source_code: "https://github.com/sulabhkatila/where-my-phone-at",
+    link: "https://github.com/sulabhkatila/where-my-phone-at",
+    description: "An ML pipeline and iOS app that infer where your phone is located (e.g., pocket, hand, or bag) while walking, using only accelerometer and gyroscope sensors. Streams real-time data to a FastAPI server with a deployed Decision-Tree Ensemble classifier.",
+  },
   {
     id: 1,
     name: "Email Read Receipts Generator",
