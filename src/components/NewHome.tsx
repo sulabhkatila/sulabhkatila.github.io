@@ -60,7 +60,7 @@ export default function NewHome() {
             <motion.a
               href={resume}
               className="home_resume-button"
-              download
+              download="Sulabh_Katila_Resume.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
