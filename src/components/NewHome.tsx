@@ -25,7 +25,7 @@ const item = {
 export default function NewHome() {
   return (
     <div className="new-home-wrapper">
-      <div className="hero-mesh-bg" aria-hidden="true" />
+
       <div className="new-home-container new-home-content">
         <motion.div
           className="home-social-container"

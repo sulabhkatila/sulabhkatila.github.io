@@ -1,5 +1,6 @@
 import "./App.css";
 
+import Scene from "./components/Scene";
 import AnimatedSection from "./components/AnimatedSection";
 import Awards from "./components/Awards";
 import Education from "./components/Education";
@@ -16,6 +17,7 @@ function App() {
     <>
       <ScrollProgress />
       <NavigationBar />
+      <Scene />
       <main id="main-content">
         <NewHome />
         <AnimatedSection>
