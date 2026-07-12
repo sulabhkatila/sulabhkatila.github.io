@@ -38,7 +38,7 @@ export default function Footer() {
           whileHover={{ scale: 1.2, y: -4 }}
           whileTap={{ scale: 0.95 }}
         >
-          <FaGithub color="#1b1b1b" />
+          <FaGithub color="#ffffff" />
         </motion.a>
         <motion.a
           href="https://www.instagram.com/katila100"
@@ -53,7 +53,7 @@ export default function Footer() {
           whileHover={{ scale: 1.2, y: -4 }}
           whileTap={{ scale: 0.95 }}
         >
-          <FaInstagram color="#1b1b1b" />
+          <FaInstagram color="#ffffff" />
         </motion.a>
         <motion.a
           href="https://www.linkedin.com/in/sulabhkatila"
@@ -68,7 +68,7 @@ export default function Footer() {
           whileHover={{ scale: 1.2, y: -4 }}
           whileTap={{ scale: 0.95 }}
         >
-          <FaLinkedin color="#1b1b1b" />
+          <FaLinkedin color="#ffffff" />
         </motion.a>
       </div>
       <div className="contact-body">

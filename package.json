@@ -10,15 +10,20 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.18.0",
+    "@types/three": "^0.185.1",
     "bootstrap": "^5.3.0",
     "boxicons": "^2.1.4",
     "framer-motion": "^12.34.3",
+    "gsap": "^3.15.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "react-multi-carousel": "^2.8.4",
     "react-tsparticles": "^2.10.1",
+    "three": "^0.185.1",
     "tsparticles-engine": "^2.10.1"
   },
   "devDependencies": {

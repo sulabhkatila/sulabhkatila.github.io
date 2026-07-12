@@ -1,10 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap");
 
 * {
   padding: 0;
   margin: 0px;
-  font-family: "Poppins", sans-serif;
+  font-family: "Outfit", sans-serif;
   scroll-behavior: smooth;
+  color: #ffffff;
+}
+
+body {
+  background-color: transparent;
+  color: #ffffff;
 }
 
 :root{
@@ -15,6 +21,11 @@
   --title-margin-bottom: 2rem;
   --section-margin-left: 7%;
   --section-margin-right: 7%;
+  
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(16px);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
 .scroll-progress-bar {
@@ -58,9 +69,10 @@
   display: flex;
   position: sticky !important;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background-color: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
   top: 0 !important;
   justify-content: space-between;
   margin: 0.3rem;
@@ -74,19 +86,19 @@
 }
 
 .custom-navbar.navbar-scrolled {
-  background-color: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
-  filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.1));
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: var(--glass-shadow);
 }
 
 .nav-link-active {
-  color: #32557f !important;
+  color: #fff !important;
   font-weight: 500;
-  background: rgba(50, 85, 127, 0.08) !important;
+  background: rgba(255, 255, 255, 0.15) !important;
 }
 
 .navbar-brand-animated {
   transition: transform 0.3s ease;
+  color: #fff !important;
 }
 
 .navbar-brand-animated:hover {
@@ -119,14 +131,15 @@
   align-items: center;
   padding: 0.7rem;
   margin-right: 10px;
-  color: inherit;
+  color: #ccc !important;
   text-decoration: none;
-  transition: background 0.5s, transform 0.5s;
+  transition: background 0.5s, transform 0.5s, color 0.3s;
   border-radius: 1.5vh;
 }
 
 .nav-link:hover {
-  background: #a4b4c4;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff !important;
   transform: scale(1.07);
 }
 
@@ -192,18 +205,22 @@
   align-items: center;
   justify-content: center;
   padding: 12px 20px;
-  background-color: #0f0f1b;
+  background-color: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
   color: #fff;
   text-decoration: none;
   border-radius: 18px;
   font-size: 20px;
   font-weight: bold;
-  transition: background-color 0.2s, transform 0.2s;
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
 
 .home_resume-button:hover {
-  background-color: #2f2b2b;
+  background-color: rgba(255, 255, 255, 0.1);
   transform: scale(1.08);
+  box-shadow: var(--glass-shadow);
 }
 
 .home_resume-icon {
@@ -607,14 +624,17 @@
   align-items: flex-start;
   gap: 1.25rem;
   padding: 1.5rem;
-  background: #fff;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s;
 }
 
 .timeline-card:hover {
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--glass-shadow);
 }
 
 .timeline-card-dot {
@@ -756,12 +776,16 @@
   padding-left: 30px;
   padding-right: 20px;
   border-radius: 1.5vh;
-  box-shadow: 0 7px 7px 0 rgba(0, 0, 0, 0.22);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease;
 }
 
 .education-card:hover {
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--glass-shadow);
 }
 
 .education-card img {
@@ -935,14 +959,18 @@
   width: calc(50% - 2rem);
   overflow: hidden;
   border-radius: 1.5vh;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
   margin-bottom: 20px;
 }
 
 .project-card-container:hover {
   transform: scale(1.1);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--glass-shadow);
 }
 
 .project-image-container img {
@@ -1071,7 +1099,10 @@ p {
 }
 
 .footer-container {
-  background-color: #f5f5f5;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-top: 1px solid var(--glass-border);
   margin-top: var(--section-margin-top);
   padding-left: 7%;
   padding-right: 7%;
@@ -1133,8 +1164,13 @@ p {
 }
 
 .contact-email a {
-  color: #0f0f0f;
+  color: #a4b4c4;
   text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-email a:hover {
+  color: #ffffff;
 }
 
 .contact-location {
