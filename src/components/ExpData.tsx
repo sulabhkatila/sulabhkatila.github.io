@@ -7,7 +7,7 @@ import sjny from "../assets/school/sjny.jpeg";
 const expData = [
     {
         id: 1,
-        name: "Automation Engineering Intern",
+        name: "Software Engineering Intern",
         company: "TransPerfect",
         location: "New York, NY",
         time: "February 2025 – May 2026",
@@ -56,7 +56,7 @@ const expData = [
     },
     {
         id: 4,
-        name: "QA Engineering Intern",
+        name: "Software Engineering Intern",
         company: "HealthStream",
         location: "Remote, USA",
         time: "September 2024 – December 2024",
