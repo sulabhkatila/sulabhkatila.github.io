@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const iconVariants = {
   hidden: { opacity: 0, y: 12 },
@@ -41,21 +41,6 @@ export default function Footer() {
           <FaGithub color="#1b1b1b" />
         </motion.a>
         <motion.a
-          href="https://www.instagram.com/katila100"
-          className="footer_social-icon"
-          target="_blank"
-          rel="noopener noreferrer"
-          variants={iconVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          custom={1}
-          whileHover={{ scale: 1.2, y: -4 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <FaInstagram color="#1b1b1b" />
-        </motion.a>
-        <motion.a
           href="https://www.linkedin.com/in/sulabhkatila"
           className="footer_social-icon"
           target="_blank"
@@ -64,7 +49,7 @@ export default function Footer() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          custom={2}
+          custom={1}
           whileHover={{ scale: 1.2, y: -4 }}
           whileTap={{ scale: 0.95 }}
         >
